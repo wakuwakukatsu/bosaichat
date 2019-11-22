@@ -1,0 +1,92 @@
+.header{
+  background-color: blue;
+  height: 80px;
+  position: relative;
+}
+.title{
+  color: orangered;
+  font-size: 80px;
+}
+#sub-title{
+  color: orangered;
+  position: absolute;
+  top: 46px;
+  right: 30px;
+  font-size: 25px;
+}
+#user-name{
+  color: cyan;
+  font-size: 40px;
+  position: absolute;
+  right: 40px;
+  top: 0px;
+}
+
+.main{
+  display: flex;
+}
+.side-bar{
+  height: calc(100vh - 80px - 30px);
+  width: 200px;
+  background-color: paleturquoise;
+}
+.user-box{
+  display: flex;
+  margin-top: 30px;
+}
+#sign-out{
+  font-size: 20px;
+  margin-left: 5px;
+}
+#sign-out a{
+  text-decoration: none;
+  color: coral;
+  border: outset;
+}
+#sign-up{
+  font-size: 20px;
+  margin-left: 5px;
+}
+#sign-up a{
+  text-decoration: none;
+  color: coral;
+  border: outset;
+}
+#sign-in{
+  margin-left: 20px;
+  font-size: 20px;
+}
+#sign-in a{
+  text-decoration: none;
+  color: coral;
+  border: outset;
+}
+#watch-info{
+  font-size: 20px;
+  margin-top: 60px;
+  margin-left: 5px;
+}
+#watch-info a{
+  color: coral;
+}
+#post-info{
+  font-size: 20px;
+  margin-top: 40px;
+  margin-left: 5px;
+}
+#post-info a{
+  color: coral;
+}
+.main-content{
+  height: calc(100vh - 80px - 30px);
+  width: calc(100vw - 200px);
+  background-color: lavender;
+}
+
+.footer{
+  height: 30px;
+  background-color: blue;
+  color: cyan;
+  text-align: center;
+  line-height: 30px;
+}
