@@ -1,0 +1,47 @@
+<div class = header>
+  <p class = title>防災くん</p>
+  <p id = sub-title>災害情報共有サイト</p>
+  <p id = user-name>
+  <% if user_signed_in? %>
+    <%= current_user.name %>
+  <% end %>
+  </p>
+</div>
+
+<div class = main>
+  <div class = side-bar>
+  <% if user_signed_in? %>
+    <div class = user-box>
+      <div id = sign-out>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+      </div>
+    </div>
+    <div id = watch-info>
+      <%= link_to '災害情報を見る', "#" %>
+    </div>
+    <div id = post-info>
+      <%= link_to '災害情報を投稿する', "#" %>
+    </div>
+  <% else %>
+    <div class = user-box>
+      <div id = sign-up>
+        <%= link_to '新規登録', new_user_registration_path %>
+      </div>
+      <div id = sign-in>
+        <%= link_to 'ログイン', new_user_session_path %>
+      </div>
+    </div>
+    <div id = watch-info>
+      <%= link_to '災害情報を見る', "#" %>
+    </div>
+  <% end %>   
+  </div>
+
+  <div class = main-content>
+    
+  </div>
+</div>
+
+<div class = footer>
+  一人でも多くの人のために災害情報を共有しましょう
+</div>
