@@ -13,22 +13,23 @@
 ActiveRecord::Schema.define(version: 20191120104018) do
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "text",       null: false
+    t.text     "text",       limit: 65535, null: false
     t.integer  "user_id"
     t.integer  "post_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.index ["post_id"], name: "index_comments_on_post_id", using: :btree
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "content"
+    t.string   "title",                    null: false
+    t.text     "content",    limit: 65535
     t.string   "image"
-    t.string   "region",     null: false
+    t.string   "area",                     null: false
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 

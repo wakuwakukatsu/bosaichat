@@ -1,0 +1,9 @@
+.messages{
+  height: 400px;
+  width: 100%;
+  overflow: scroll;
+  display: flex;
+}
+.message{
+  margin-left: 10px;
+}

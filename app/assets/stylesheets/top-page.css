@@ -1,5 +1,5 @@
 .header{
-  background-color: blue;
+  background-color: rgb(81, 81, 129);
   height: 80px;
   position: relative;
 }
@@ -73,9 +73,9 @@
   font-size: 20px;
   margin-top: 40px;
   margin-left: 5px;
-}
-#post-info a{
   color: coral;
+  cursor: pointer;
+  text-decoration: underline;
 }
 .main-content{
   height: calc(100vh - 80px - 30px);
@@ -85,7 +85,7 @@
 
 .footer{
   height: 30px;
-  background-color: blue;
+  background-color: rgb(81, 81, 129);
   color: cyan;
   text-align: center;
   line-height: 30px;
