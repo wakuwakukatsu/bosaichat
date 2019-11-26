@@ -17,10 +17,10 @@
       </div>
     </div>
     <div id = watch-info>
-      <%= link_to '災害情報を見る', "#" %>
+      <%= link_to '災害情報を見る', "/posts" %>
     </div>
     <div id = post-info>
-      <%= link_to '災害情報を投稿する', "#" %>
+      災害情報を投稿する
     </div>
   <% else %>
     <div class = user-box>
@@ -38,7 +38,26 @@
   </div>
 
   <div class = main-content>
-    
+    <div class = messages>
+      <%= render partial: "posts" %>
+    </div>
+    <div class = input-box>
+      <div class="popup-overlay">
+        <div class="popup-content">
+          <%= form_for @post do |f| %>
+            <%= f.text_field :area, class: 'input-box_area', placeholder: '地域を入力' %>
+            <%= f.text_field :title, class: 'input-box_title', placeholder: 'タイトルを入力' %>
+            <%= f.text_area :content, class: 'input-box_text', placeholder: '情報を入力' %>
+            <%= f.label :image, class: 'input-box_image' do %>
+              <%= icon('far', 'image', class: 'syashin') %>
+              <%= f.file_field :image, class: 'hidden' %>
+            <% end %>
+          <%= f.submit '投稿', class: 'submit-btn' %>
+          <% end %>
+          <button class="close">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
