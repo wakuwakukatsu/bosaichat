@@ -67,7 +67,7 @@
   font-size: 20px;
   cursor: pointer;
   background-color: beige;
-  border-color: lightsalmon;
+  border: solid lightsalmon;
   border-radius: 20px;
   margin-left: 20px;
   margin-bottom: 30px;
@@ -78,7 +78,7 @@
 }
 .close{
   font-size: 15px;
-  border:1px solid rgb(117, 191, 191);
+  border: solid rgb(117, 191, 191);
   background-color: beige;
   cursor: pointer;
   margin-left: 5px;

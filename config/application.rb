@@ -16,6 +16,7 @@ module Bosaichat
       g.javascripts false
       g.helper false
       g.test_framework false
+      config.time_zone = 'Asia/Tokyo'
     end
   end
 end
