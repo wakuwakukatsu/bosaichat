@@ -1,0 +1,20 @@
+<div class = message3>
+    <div class = message-area2>
+      <%= @post.area %>
+    </div>
+    <div class = message-user3>
+      <%= @post.user.name %>
+    </div>
+    <div class = message-date3>
+      <%= @post.created_at.strftime("%Y/%m/%d %H:%M") %>
+    </div>
+    <div class = message-title3>
+      <%= @post.title %>
+    </div>
+    <div class = message-image3>
+      <%= image_tag @post.image.url if @post.image.present? %>
+    </div>
+    <div class = message-content3>
+      <%= @post.content %>
+    </div>
+  </div>

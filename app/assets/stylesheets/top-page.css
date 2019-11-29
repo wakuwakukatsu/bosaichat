@@ -1,5 +1,5 @@
 .header{
-  background-color: rgb(81, 81, 129);
+  background-color: rgb(36, 36, 87);
   height: 80px;
   position: relative;
 }
@@ -28,7 +28,7 @@
 .side-bar{
   height: calc(100vh - 80px - 30px);
   width: 200px;
-  background-color: paleturquoise;
+  background-color: rgb(81, 81, 129);
 }
 .user-box{
   display: flex;
@@ -77,15 +77,65 @@
   cursor: pointer;
   text-decoration: underline;
 }
+#weather{
+  color: coral;
+  text-decoration: underline;
+  font-size: 20px;
+  margin-top: 40px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
 .main-content{
   height: calc(100vh - 80px - 30px);
   width: calc(100vw - 200px);
   background-color: lavender;
 }
+.photos{
+  height: 450px;
+}
+.photos.hidden{
+  visibility: hidden;
+}
+.photos img {
+  height: 450px;
+  width: 100%;
+  }
+.maps{
+  visibility: hidden;
+  display: flex;
+  overflow: scroll;
+  z-index: 0.5;
+  position: absolute;
+  top: 80px;
+  left: 200px;
+  width: calc(100vw - 200px);
+}
+.maps.active{
+  visibility: visible;
+}
+.map{
+  margin-right: 10px;
+}
+.tojiru{
+  background-color: aqua;
+  position: absolute;
+  top: 83%;
+  left: 292px;
+  font-size: 25px;
+  border-radius: 20px;
+  border: solid blue;
+  cursor: pointer;
+}
+.tojiru:hover{
+  background-color: blue;
+  transition: 0.8s;
+  transition-property: background-color;
+}
 
 .footer{
   height: 30px;
-  background-color: rgb(81, 81, 129);
+  background-color: rgb(36, 36, 87);
   color: cyan;
   text-align: center;
   line-height: 30px;

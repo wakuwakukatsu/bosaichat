@@ -10,6 +10,16 @@ $(function(){
     $(".popup-overlay, .popup-content").removeClass("active");
   });
 
+  $("#weather").on("click", function(){
+    $(".maps").addClass("active");
+    $(".photos").addClass("hidden");
+  });
+
+  $(".tojiru").on("click", function(){
+    $(".maps").removeClass("active");
+    $(".photos").removeClass("hidden");
+  });
+
   function buildHTML(post){
     image = ( post.image ) ? `<img class= "message-image" src=${post.image} >` : " ";
     
@@ -51,7 +61,7 @@ $(function(){
     })
     .done(function(post){
       buildHTML(post)
-      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+      $('.messages').animate({scrollLeft: 0}, { duration: 2000});
       $('form')[0].reset();
       $('.submit-btn').prop('disabled', false);
     })
@@ -60,4 +70,16 @@ $(function(){
     })
   })  
 
+  $(function(){
+    $('.photos').slick({
+    infinite: true, //スライドのループ有効化
+    autoplay:true,     //自動再生
+    autoplaySpeed: 0, //待ち時間を０に
+    speed: 10000,     //自動再生の速度
+    pauseOnHover: false,
+    cssEase: 'linear',// 切り替えイージングを'linear'に
+    //ここにオプションを書いていく
+    arrows:false
+    });
+    });
 });

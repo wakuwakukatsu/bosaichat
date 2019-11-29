@@ -1,0 +1,37 @@
+<button>
+  <%= link_to 'TOPページ', root_path %>
+</button>
+<div class = jouhou>
+  <div class = messages2>
+    <% @posts.each do |post| %>
+      <div class = message2>
+        <div class = message-area2>
+          <%= post.area %>
+        </div>
+        <div class = message-user2>
+          <%= post.user.name %>
+        </div>
+        <div class = message-date2>
+          <%= post.created_at.strftime("%Y/%m/%d %H:%M") %>
+        </div>
+        <div class = message-title2>
+          <%= post.title %>
+        </div>
+        <div class = message-image2>
+          <%= image_tag post.image.url if post.image.present? %>
+        </div>
+        <div class = message-content2>
+          <%= post.content %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class = dougas>
+    <div class = douga>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/knx2unYsuTQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/C9pMxx3fKIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/W-ysu-7obF4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/86LFsxIF9a4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
