@@ -16,20 +16,151 @@
   background-color: antiquewhite;
   border: solid navajowhite;
 }
+
+.search-back{
+  height: 50px;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+.search-back.active{
+  visibility: visible;
+}
+.search-form{
+  position: absolute;
+  top: 10px;
+  left: 40%;
+}
+.search-input{
+  font-size: 20px;
+}
+.search-btn{
+  background-color: lightcyan;
+  font-size: 17px;
+  cursor: pointer;
+}
 .jouhou{
   display: flex;
+}
+.sub-function{
+  width: 700px;
+  background-color: aliceblue;
+}
+.botan2{
+  margin-top: 60px;
+  margin-left: 5px;
+  font-size: 15px;
+}
+.botan3{
+  margin-top: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.botan3.hidden{
+  visibility: hidden;
+}
+.botan4{
+  margin-top: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  visibility: hidden;
+}
+.botan4.active{
+  visibility: visible;
 }
 .messages2{
   overflow: scroll;
   height: 100vh;
   min-width: min-content;
+  border-top: solid red;
 }
 .message2{
   border: solid red;
-  border-bottom: none;
+  border-top: none;
   width: fit-content;
+  position: relative;
+}
+.message2 a{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* text-indent:-999px; */
+    z-index: 1; 
 }
 .dougas{
   overflow: scroll;
   height: 100vh;
+}
+
+.message3{
+  margin-top: 10px;
+  text-align: center;
+  font-size: xx-large;
+}
+.message-date3{
+  font-size: large;
+}
+.message-title3{
+  font-size: -webkit-xxx-large;
+}
+.message-image3{
+  border: solid black;
+}
+.message-content3{
+  margin-top: 40px;
+}
+.buttons{
+  position: absolute;
+  top: 8px;
+  left: 5px;
+}
+.botan{
+  font-size: 15px;
+}
+.input-box_comment{
+  width: 90%;
+  height: 50px;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 3.8%;
+  border: solid mediumaquamarine;
+  padding-left: 10px;
+}
+.submit-btn2{
+  width: 80px;
+  height: 35px;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-left: 85%;
+  background-color: honeydew;
+  border: solid mediumaquamarine;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.submit-btn2:hover{
+  background-color: mediumaquamarine;
+  transition: 0.8s;
+  transition-property: background-color;
+}
+.comments{
+  text-align: center;
+  margin-top: 10px;
+  border-bottom: solid aquamarine;
+}
+.inner-comment{
+  padding: 20px;
+  border: solid aquamarine;
+  border-bottom: none;
+}
+.comment-date{
+  font-size: x-small;
+}
+.comment-text{
+  margin-top: 5px;
 }

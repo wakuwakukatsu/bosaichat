@@ -1,10 +1,25 @@
-<button>
-  <%= link_to 'TOPページ', root_path %>
-</button>
+<div class = search-back>
+  <%= form_tag(search_posts_path, method: :get, local: true, class: "search-form") do %>
+    <%= text_field_tag :keyword, "", placeholder: "投稿を検索する", class: "search-input" %>
+    <%= submit_tag "検索", class: "search-btn" %>
+  <% end %>
+</div>
 <div class = jouhou>
+  <div class = sub-function>
+    <button class = botan2>
+      <%= link_to 'TOPページ', root_path %>
+    </button>
+    <button class = botan3>
+      検索を開く<br>（都道府県）
+    </button>
+    <button class = botan4>
+      検索を閉じる<br>（都道府県）
+    </button>
+  </div>
   <div class = messages2>
     <% @posts.each do |post| %>
       <div class = message2>
+        <%= link_to '', post_path(post) %>
         <div class = message-area2>
           <%= post.area %>
         </div>
