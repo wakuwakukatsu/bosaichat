@@ -1,20 +1,52 @@
 <div class = message3>
-    <div class = message-area2>
-      <%= @post.area %>
-    </div>
-    <div class = message-user3>
-      <%= @post.user.name %>
-    </div>
-    <div class = message-date3>
-      <%= @post.created_at.strftime("%Y/%m/%d %H:%M") %>
-    </div>
-    <div class = message-title3>
-      <%= @post.title %>
-    </div>
-    <div class = message-image3>
-      <%= image_tag @post.image.url if @post.image.present? %>
-    </div>
-    <div class = message-content3>
-      <%= @post.content %>
-    </div>
+  <div class = message-area3>
+    <%= @post.area %>
   </div>
+  <div class = message-user3>
+    <%= @post.user.name %>
+  </div>
+  <div class = message-date3>
+    <%= @post.created_at.strftime("%Y/%m/%d %H:%M") %>
+  </div>
+  <div class = message-title3>
+    <%= @post.title %>
+  </div>
+  <div class = message-image3>
+    <%= image_tag @post.image.url if @post.image.present? %>
+  </div>
+  <div class = message-content3>
+    <%= @post.content %>
+  </div>
+</div>
+<div class = buttons>
+  <button class = botan>
+    <%= link_to 'TOPページ', root_path %>
+  </button>
+  <button class = botan>
+    <%= link_to '災害情報に戻る', comments_path %>
+  </button>
+</div>
+
+<% if user_signed_in? %>
+  <div class = comment>
+    <%= form_for [@post, @comment] do |f| %>
+      <%= f.text_area :text, class: 'input-box_comment', placeholder: 'コメントを入力' %> 
+      <%= f.submit '送信', class: 'submit-btn2' %>
+    <% end %>
+  </div>
+  <div class = comments>
+    <% @comments.each do |comment| %>
+      <div class = inner-comment>
+        <div class = comment-user>
+          <%= comment.user.name %>
+        </div>
+        <div class = comment-date>
+          <%= comment.created_at.strftime("%Y/%m/%d %H:%M") %>
+        </div>
+        <div class = comment-text>
+          <%= comment.text %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

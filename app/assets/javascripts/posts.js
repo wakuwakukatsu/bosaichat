@@ -20,6 +20,17 @@ $(function(){
     $(".photos").removeClass("hidden");
   });
 
+  $(".botan3").on("click", function(){
+    $(".botan3").addClass("hidden");
+    $(".botan4, .search-back").addClass("active");
+  });
+
+  //removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
+  $(".botan4").on("click", function(){
+    $(".botan3").removeClass("hidden");
+    $(".botan4, .search-back").removeClass("active");
+  });
+
   function buildHTML(post){
     image = ( post.image ) ? `<img class= "message-image" src=${post.image} >` : " ";
     

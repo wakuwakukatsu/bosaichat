@@ -16,6 +16,13 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user).order("created_at DESC")
+  end
+
+  def search
+    @posts = Post.search(params[:keyword])
+    render "comments/index"
   end
 
   private
