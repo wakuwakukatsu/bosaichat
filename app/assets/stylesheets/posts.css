@@ -6,7 +6,7 @@
   background-color: mintcream;
 }
 .message{
-  height: fit-content;
+  min-width: 200px;
   padding-top: 5px;
   padding-left: 5px;
   padding-right: 5px;
@@ -15,6 +15,7 @@
   margin-left: 5px;
   background-color: antiquewhite;
   border: solid navajowhite;
+  word-wrap: break-word;
 }
 
 .search-back{
@@ -81,7 +82,7 @@
 .message2{
   border: solid red;
   border-top: none;
-  width: fit-content;
+  min-width: 300px;
   position: relative;
 }
 .message2 a{
