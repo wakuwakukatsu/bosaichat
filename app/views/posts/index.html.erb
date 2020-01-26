@@ -63,14 +63,14 @@
             ["徳島"],["香川"],["愛媛"],["高知"],["福岡"],
             ["佐賀"],["長崎"],["熊本"],["大分"],["宮崎"],
             ["鹿児島"],["沖縄"]], {include_blank: "都道府県 選択"}, {class: "input-box_area"} %>
-            <%# <%= f.text_field :area, class: 'input-box_area', placeholder: '地域を入力' %>
             <%= f.text_field :title, class: 'input-box_title', placeholder: 'タイトルを入力' %>
             <%= f.text_area :content, class: 'input-box_text', placeholder: '情報を入力' %>
             <%= f.label :image, class: 'input-box_image' do %>
               <%= icon('far', 'image', class: 'syashin') %>
               <%= f.file_field :image, class: 'hidden' %>
             <% end %>
-          <%= f.submit '投稿', class: 'submit-btn' %>
+            <img id="preview">
+            <%= f.submit '投稿', class: 'submit-btn' %>
           <% end %>
           <button class="close">Close</button>
         </div>

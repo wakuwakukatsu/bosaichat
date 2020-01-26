@@ -10,6 +10,14 @@ $(function(){
     $(".popup-overlay, .popup-content").removeClass("active");
   });
 
+  $('.hidden').on('change', function (e) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $("#preview").attr('src', e.target.result);
+    }
+    reader.readAsDataURL(e.target.files[0]);
+  });
+
   $("#weather").on("click", function(){
     $(".maps").addClass("active");
     $(".photos").addClass("hidden");

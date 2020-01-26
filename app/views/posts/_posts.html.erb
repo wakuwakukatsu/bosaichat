@@ -1,5 +1,6 @@
 <% @posts.each do |post| %>
   <div class = message>
+    <%= link_to '', post_path(post) %>
     <div class = message-area>
       <%= post.area %>
     </div>
@@ -13,7 +14,7 @@
       <%= post.title %>
     </div>
     <div class = message-image >
-      <%= image_tag post.image.url, size: "200x200" if post.image.present? %>
+      <%= image_tag post.image.url if post.image.present? %>
     </div>
     <div class = message-content>
       <%= post.content %>
