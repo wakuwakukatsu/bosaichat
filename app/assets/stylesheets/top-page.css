@@ -115,13 +115,13 @@
   visibility: visible;
 }
 .map{
-  margin-right: 10px;
+  margin-right: 200px;
 }
 .tojiru{
   background-color: aqua;
   position: absolute;
   top: 83%;
-  left: 292px;
+  left: 240px;
   font-size: 25px;
   border-radius: 20px;
   border: solid blue;
